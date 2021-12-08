@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  flasapp:
+    build:./MyUrlproject
+
+    ports:
+      -"8000:8000"
+    network_mode: bridge
+
+    
