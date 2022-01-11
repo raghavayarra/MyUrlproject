@@ -1,4 +1,4 @@
-host="65.0.133.79"
+host="13.235.70.41"
 user="raghava"   
-password="Raghava@1234"
-database="officialdb"
+password="Raghava@123"
+database="urlscanner"
