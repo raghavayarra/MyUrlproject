@@ -1,6 +1,0 @@
-ls
-pwd
-ifconfig -a 
-hostname
-free -g
-df -h
