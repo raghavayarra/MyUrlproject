@@ -1,49 +1,47 @@
-# Modules and Functions in Python:-
+# Inheritance
 
-import math
-print(math.sqrt(81))
-print(math.factorial(5))
+class Animal:  
+    def speak(self):  
+        print("Animal Speaking")  
+#child class Dog inherits the base class Animal  
+class Dog(Animal):  
+    def bark(self):  
+        print("dog barking")  
+d = Dog()  
+d.bark()  
+d.speak() 
 
-# write a program in python which returns the gcd of two numbers.
+# Multi-Level inheritance
 
-print("The gcd of 9 and 15 is : ", end="")
-print(math.gcd(9,15))
-
-
-def computeGCD(a,b):
-    if b==0:
-        return a
-    
-    else:
-        return computeGCD(b,a%b)
-
-a=int(input("enter a first number :"))
-b=int(input("enter a second number :"))
-
-print(computeGCD(a,b))
-
-
-# write a program in python which calculates the LCM of two numbers.
-
-def Compute_LCM(n1,n2):
-    if n1>n2:
-        higher = n1
-        
-    else:
-        higher = n2
-    
-    value =higher
-
-    while True:
-        if higher%n1==0 and higher%n2==0:
-            print("LCM of {} and {} is {}".format(n1,n2,higher))
-            break
-
-        else:
-            higher=higher+value
-n1=int(input("Enter the first number:"))
-n2=int(input("Enter the second number:"))
-
-Compute_LCM(n1,n2)
+class Animal:  
+    def speak(self):  
+        print("Animal Speaking")  
+#The child class Dog inherits the base class Animal  
+class Dog(Animal):  
+    def bark(self):  
+        print("dog barking")  
+#The child class Dogchild inherits another child class Dog  
+class DogChild(Dog):  
+    def eat(self):  
+        print("Eating bread...")  
+d = DogChild()  
+d.bark()  
+d.speak()  
+d.eat()  
 
 
+#  Multiple inheritance
+
+class Calculation1:  
+    def Summation(self,a,b):  
+        return a+b;  
+class Calculation2:  
+    def Multiplication(self,a,b):  
+        return a*b;  
+class Derived(Calculation1,Calculation2):  
+    def Divide(self,a,b):  
+        return a/b;  
+d = Derived()  
+print(d.Summation(10,20))  
+print(d.Multiplication(10,20))  
+print(d.Divide(10,20))
